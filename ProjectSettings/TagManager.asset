@@ -10,6 +10,7 @@ TagManager:
   - ZombieRapido
   - CuerpoZombie
   - Bala1
+  - Interactivo
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Piso
+    uniqueID: 2484828763
+    locked: 0
+  - name: Paredes
+    uniqueID: 162333697
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3519946007
     locked: 0

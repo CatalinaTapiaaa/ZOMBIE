@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Boton : MonoBehaviour
 {
+    float tiempo;
+
     public void Titulo()
     {
         SceneManager.LoadScene(0);
+
     }
 
     public void Lobby()
@@ -18,6 +21,7 @@ public class Boton : MonoBehaviour
     public void Tutorial()
     {
         SceneManager.LoadScene(2);
+        tiempo = Time.timeScale;
     }
 
     public void Nivel1()

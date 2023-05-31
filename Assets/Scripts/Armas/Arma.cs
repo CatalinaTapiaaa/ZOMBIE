@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class Arma : MonoBehaviour
 {
+    public CantidadBalas cantidadBalas;
     public GameObject bala;
     public Transform puntero;
 
+    [Header("Sistema de Armas")]
+    public float balasArma;
+    public int tiempoEnfriamiento;
+
+    void Start()
+    {
+        balasArma = GetComponent<CantidadBalas>().balas;
+    }
+
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bala, puntero.position, puntero.rotation);
+            if (balasArma >= 1)
+            {
+                Instantiate(bala, puntero.position, puntero.rotation);
+                balasArma -= 1;
+            }
         }
     }
 }
