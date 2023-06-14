@@ -364,6 +364,8 @@ MonoBehaviour:
   tiempoDeEspera: 5
   timer: 0
   playerDetected: 0
+  caminar: 6
+  correr: 6
 --- !u!65 &691241126
 BoxCollider:
   m_ObjectHideFlags: 0
