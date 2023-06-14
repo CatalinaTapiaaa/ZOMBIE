@@ -11,20 +11,28 @@ public class Arma : MonoBehaviour
     [Header("Sistema de Armas")]
     public float balasArma;
     public int tiempoEnfriamiento;
+    float tiempo;
 
-    void Start()
+    private void Start()
     {
-        balasArma = GetComponent<CantidadBalas>().balas;
+        tiempo = tiempoEnfriamiento;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        balasArma = cantidadBalas.balas;
+        tiempo += Time.deltaTime;
+
+        if (tiempo >= tiempoEnfriamiento)
         {
-            if (balasArma >= 1)
+            if (Input.GetMouseButtonDown(0))
             {
-                Instantiate(bala, puntero.position, puntero.rotation);
-                balasArma -= 1;
+                if (balasArma >= 1)
+                {
+                    tiempo = 0;
+                    Instantiate(bala, puntero.position, puntero.rotation);
+                    cantidadBalas.balas -= 1;
+                }
             }
         }
     }

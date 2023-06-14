@@ -6,10 +6,12 @@ public class Player : MonoBehaviour
 {
     public Rigidbody2D rb2D;
     public Animator animator;
+    public GameObject arma;
 
     [Header("Jugador")]
     [SerializeField] private float velocidad;
     [SerializeField] private float correr;
+    [SerializeField] public int vida;
     bool estaDentro;
 
     Vector2 movimiento;
@@ -32,15 +34,22 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 rb2D.MovePosition(rb2D.position + movimiento * 0);
+                arma.SetActive(false);
             }
             else
             {
                 rb2D.MovePosition(rb2D.position + movimiento * velocidad * Time.fixedDeltaTime);
+                arma.SetActive(true);
             }
         }
         if (!estaDentro)
         {
             rb2D.MovePosition(rb2D.position + movimiento * velocidad * Time.fixedDeltaTime);
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            rb2D.MovePosition(rb2D.position + movimiento * correr * Time.fixedDeltaTime);
         }
     }
 

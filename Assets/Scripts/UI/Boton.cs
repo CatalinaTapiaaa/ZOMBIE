@@ -7,37 +7,47 @@ public class Boton : MonoBehaviour
 {
     float tiempo;
 
-    public void Titulo()
+    public void Introduccion()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+    }
 
+    public void Titulo()
+    {
+        SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
 
     public void Lobby()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
     }
 
     public void Tutorial()
     {
-        SceneManager.LoadScene(2);
-        tiempo = Time.timeScale;
+        SceneManager.LoadScene(3);
+        Time.timeScale = 1f;
     }
 
     public void Nivel1()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
+        Time.timeScale = 1f;
     }
 
     public void Nivel2()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
+        Time.timeScale = 1f;
     }
 
 
     public void Creditos()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
+        Time.timeScale = 1f;
     }
 
     public void Exit()

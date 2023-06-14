@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZombieNormal : MonoBehaviour
 {
+    public Transform player;
+    private NavMeshAgent agente;
     public int vida;
 
     [Header("DañoArma")]
     public int bala1;
 
-    private void Update()
+    private void Start()
     {
+        agente = GetComponent<NavMeshAgent>();
+    }
+
+    public void Update()
+    {
+        agente.SetDestination(player.position);
+
         if(vida <= 0)
         {
             Destroy(gameObject);

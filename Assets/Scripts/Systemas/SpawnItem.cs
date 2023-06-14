@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnPuntaje : MonoBehaviour
+public class SpawnItem : MonoBehaviour
 {
     [Header("Barra de Carga")]
     public GameObject barra;
@@ -37,7 +37,7 @@ public class SpawnPuntaje : MonoBehaviour
 
                 if(escala.x >= 1)
                 {
-                    Destroy(barra);
+                    Destroy(gameObject);
                     Instantiate(items[aleatorio], transform.position, transform.rotation);
                 }
             }

@@ -4,13 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Busqueda
   - Enemy
   - ZombieNormal
   - ZombieRapido
-  - CuerpoZombie
-  - Bala1
   - Interactivo
+  - Arma 01
+  - Arma 02
+  - Arma 03
+  - Agua
+  - Llave
   layers:
   - Default
   - TransparentFX
@@ -53,6 +55,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: a
+    uniqueID: 3117630459
     locked: 0
   - name: UI
     uniqueID: 3519946007
